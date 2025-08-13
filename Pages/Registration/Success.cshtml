@@ -1,0 +1,130 @@
+@page
+@model CreditCardRegistration.Pages.Registration.SuccessModel
+@{
+    ViewData["Title"] = "Application Successful";
+}
+
+@section Styles {
+    <style>
+        .success-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background: white;
+        }
+        .success-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .success-icon {
+            color: #28a745;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .details-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .detail-row {
+            display: flex;
+            margin-bottom: 0.5rem;
+        }
+        .detail-label {
+            font-weight: bold;
+            min-width: 150px;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .reference-number {
+            text-align: center;
+            margin-top: 2rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+    </style>
+}
+
+<div class="success-container">
+    <div class="success-header">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>Application Submitted Successfully!</h1>
+        <p class="lead">Thank you for choosing our credit card service</p>
+    </div>
+
+    @if (Model.RegistrationData != null)
+    {
+        <div class="details-card">
+            <h3 class="text-center mb-4">Application Details</h3>
+            
+            <div class="detail-row">
+                <span class="detail-label">Name:</span>
+                <span>@Model.RegistrationData.FirstName @Model.RegistrationData.LastName</span>
+            </div>
+            
+            <div class="detail-row">
+                <span class="detail-label">Email:</span>
+                <span>@Model.RegistrationData.Email</span>
+            </div>
+            
+            <div class="detail-row">
+                <span class="detail-label">Card Type:</span>
+                <span>@Model.RegistrationData.CardType</span>
+            </div>
+            
+            <div class="detail-row">
+                <span class="detail-label">Card Number:</span>
+                <span>**** **** **** @Model.RegistrationData.CardNumberLast4</span>
+            </div>
+            
+            <div class="detail-row">
+                <span class="detail-label">Submission Date:</span>
+                <span>@Model.RegistrationData.SubmissionDate</span>
+            </div>
+        </div>
+    }
+
+    <div class="text-center">
+        <p>We've sent a confirmation email to @Model.RegistrationData?.Email with further details.</p>
+        <p>Our team will review your application and contact you within 3 business days.</p>
+    </div>
+
+    <div class="action-buttons">
+        <a href="/" class="btn btn-outline-primary">
+            <i class="fas fa-home me-2"></i>Return Home
+        </a>
+        <a href="/Registration" class="btn btn-primary">
+            <i class="fas fa-plus-circle me-2"></i>New Application
+        </a>
+        <button id="printBtn" class="btn btn-secondary">
+            <i class="fas fa-print me-2"></i>Print
+        </button>
+    </div>
+
+    <div class="reference-number">
+        <small>Reference #@(DateTime.Now.Ticks.ToString().Substring(5, 10))</small>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Print functionality
+            document.getElementById('printBtn').addEventListener('click', function() {
+                window.print();
+            });
+
+            // Auto-scroll to top to ensure success message is visible
+            window.scrollTo(0, 0);
+        });
+    </script>
+}

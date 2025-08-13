@@ -1,0 +1,33 @@
+@page
+@model DocumentUploadModel
+@{
+    ViewData["Title"] = "Upload Documents";
+}
+
+<h2>Upload Required Documents</h2>
+
+<form method="post" enctype="multipart/form-data" class="mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Input.DocumentType"></label>
+                <select asp-for="Input.DocumentType" asp-items="Model.DocumentTypes" class="form-control">
+                    <option value="">-- Select Document Type --</option>
+                </select>
+                <span asp-validation-for="Input.DocumentType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.DocumentFile"></label>
+                <input asp-for="Input.DocumentFile" class="form-control" />
+                <span asp-validation-for="Input.DocumentFile" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Continue to Confirmation</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

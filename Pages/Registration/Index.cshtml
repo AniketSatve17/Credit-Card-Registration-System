@@ -1,0 +1,149 @@
+﻿@page
+@model CreditCardRegistration.Pages.Registration.IndexModel
+@{
+    ViewData["Title"] = "Apply for Credit Card";
+}
+
+@section Styles {
+    <style>
+        .card {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            border-radius: 15px 15px 0 0 !important;
+        }
+
+        .form-control, .form-select {
+            border-radius: 8px;
+        }
+    </style>
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0 text-center">
+                        <i class="fas fa-credit-card me-2"></i>Credit Card Application
+                    </h2>
+                </div>
+
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @Model.ErrorMessage
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    }
+
+                    <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <!-- Personal Information -->
+                            <div class="col-md-6">
+                                <label asp-for="Registration.FirstName" class="form-label"></label>
+                                <input asp-for="Registration.FirstName" class="form-control" required>
+                                <span asp-validation-for="Registration.FirstName" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Registration.LastName" class="form-label"></label>
+                                <input asp-for="Registration.LastName" class="form-control" required>
+                                <span asp-validation-for="Registration.LastName" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="Registration.Email" class="form-label"></label>
+                                <input asp-for="Registration.Email" class="form-control" required>
+                                <span asp-validation-for="Registration.Email" class="text-danger"></span>
+                            </div>
+
+                            <!-- Card Information -->
+                            <div class="col-md-6">
+                                <label asp-for="Registration.CardNumber" class="form-label"></label>
+                                <input asp-for="Registration.CardNumber" class="form-control" placeholder="4111 1111 1111 1111" required>
+                                <span asp-validation-for="Registration.CardNumber" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Registration.CardType" class="form-label"></label>
+                                <select asp-for="Registration.CardType" class="form-select" required>
+                                    <option value="">Select Card Type</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="MasterCard">MasterCard</option>
+                                    <option value="American Express">American Express</option>
+                                </select>
+                                <span asp-validation-for="Registration.CardType" class="text-danger"></span>
+                            </div>
+
+                            <!-- Document Upload -->
+                            <div class="col-12">
+                                <label asp-for="Registration.IdentityDocument" class="form-label"></label>
+                                <input asp-for="Registration.IdentityDocument" class="form-control" type="file" accept=".pdf,.jpg,.png" required>
+                                <span asp-validation-for="Registration.IdentityDocument" class="text-danger"></span>
+                                <small class="form-text text-muted">Upload PDF, JPG or PNG (Max 5MB)</small>
+                            </div>
+
+                            <!-- Admin Section (Conditional) -->
+                            @if (User.IsInRole("Admin"))
+                            {
+                            <div class="col-12 mt-3 border-top pt-3">
+                                <h5 class="text-muted">Admin Section</h5>
+                                <label asp-for="Registration.AdminNotes" class="form-label"></label>
+                                <textarea asp-for="Registration.AdminNotes" class="form-control" rows="2"></textarea>
+                            </div>
+                            }
+
+                            <!-- Submit Button -->
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary w-100 py-2">
+                                    <i class="fas fa-paper-plane me-2"></i>Submit Application
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card-footer text-muted text-center">
+                    <small>Application processed securely. <a href="/Privacy">View our privacy policy</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        // Client-side validation enhancement
+        document.addEventListener('DOMContentLoaded', function () {
+            // Format credit card number input
+            const cardNumberInput = document.querySelector('input[name$="CardNumber"]');
+            if (cardNumberInput) {
+                cardNumberInput.addEventListener('input', function (e) {
+                    let value = e.target.value.replace(/\s+/g, '');
+                    if (value.length > 0) {
+                        value = value.match(new RegExp('.{1,4}', 'g')).join(' ');
+                    }
+                    e.target.value = value;
+                });
+            }
+
+            // File size validation
+            const fileInput = document.querySelector('input[type="file"]');
+            if (fileInput) {
+                fileInput.addEventListener('change', function (e) {
+                    const file = e.target.files[0];
+                    if (file && file.size > 5 * 1024 * 1024) {
+                        alert('File size exceeds 5MB limit');
+                        e.target.value = '';
+                    }
+                });
+            }
+        });
+    </script>
+}

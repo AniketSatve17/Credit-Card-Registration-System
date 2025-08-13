@@ -1,0 +1,55 @@
+@page
+@model ConfirmModel
+@{
+    ViewData["Title"] = "Confirm Your Details";
+}
+
+<h2>Please Confirm Your Details</h2>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h4>Personal Information</h4>
+        <dl class="row">
+            <dt class="col-sm-4">Name:</dt>
+            <dd class="col-sm-8">@Model.UserData.FirstName @Model.UserData.LastName</dd>
+
+            <dt class="col-sm-4">Email:</dt>
+            <dd class="col-sm-8">@Model.UserData.Email</dd>
+
+            <dt class="col-sm-4">Phone:</dt>
+            <dd class="col-sm-8">@(Model.UserData.PhoneNumber ?? "Not provided")</dd>
+
+            <dt class="col-sm-4">Date of Birth:</dt>
+            <dd class="col-sm-8">@Model.UserData.DateOfBirth.ToString("yyyy-MM-dd")</dd>
+
+            <dt class="col-sm-4">Gender:</dt>
+            <dd class="col-sm-8">@Model.UserData.Gender</dd>
+
+            <dt class="col-sm-4">Country:</dt>
+            <dd class="col-sm-8">@Model.UserData.Country</dd>
+        </dl>
+    </div>
+
+    <div class="col-md-6">
+        <h4>Document Information</h4>
+        <dl class="row">
+            <dt class="col-sm-4">Document Type:</dt>
+            <dd class="col-sm-8">@Model.DocumentInfo.DocumentType</dd>
+
+            <dt class="col-sm-4">File Name:</dt>
+            <dd class="col-sm-8">@Model.DocumentInfo.DocumentName</dd>
+        </dl>
+    </div>
+</div>
+
+<form method="post">
+    <div class="form-group mt-4">
+        <button type="submit" name="handler" value="Confirm" class="btn btn-success">Confirm and Submit</button>
+        <a asp-page="Register" class="btn btn-secondary ml-2">Back to Edit</a>
+    </div>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.StatusMessage))
+{
+<div class="alert alert-info mt-3">@Model.StatusMessage</div>
+}
