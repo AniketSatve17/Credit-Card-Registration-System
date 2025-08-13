@@ -1,0 +1,19 @@
+2025-04-07 00:51:46.590 +08:00 [INF] Starting the application...
+2025-04-07 00:51:46.957 +08:00 [INF] Now listening on: https://localhost:5001
+2025-04-07 00:51:46.961 +08:00 [INF] Now listening on: http://localhost:5000
+2025-04-07 00:51:46.965 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-07 00:51:46.967 +08:00 [INF] Hosting environment: Development
+2025-04-07 00:51:46.967 +08:00 [INF] Content root path: C:\users\anike\source\repos\CreditCardRegistration\CreditCardRegistration
+2025-04-07 00:52:00.945 +08:00 [INF] Home page accessed at "2025-04-06T16:52:00.9436761Z"
+2025-04-07 00:52:01.161 +08:00 [INF] HTTP GET / responded 200 in 305.3170 ms
+2025-04-07 00:52:03.324 +08:00 [INF] Registration page accessed at "2025-04-06T16:52:03.3243693Z"
+2025-04-07 00:52:03.472 +08:00 [INF] HTTP GET /Registration responded 200 in 205.4588 ms
+2025-04-07 00:52:28.502 +08:00 [WRN] Invalid registration submission. Errors: Invalid credit card number
+2025-04-07 00:52:28.515 +08:00 [INF] HTTP POST /Registration responded 200 in 110.0734 ms
+2025-04-07 00:53:11.943 +08:00 [INF] New registration received for satveniket@gmail.com
+2025-04-07 00:53:12.157 +08:00 [INF] HTTP POST /Registration responded 302 in 248.7849 ms
+2025-04-07 00:53:12.228 +08:00 [INF] HTTP GET /Registration/Success responded 200 in 57.1647 ms
+2025-04-07 00:53:44.487 +08:00 [INF] Home page accessed at "2025-04-06T16:53:44.4872255Z"
+2025-04-07 00:53:44.494 +08:00 [INF] HTTP GET / responded 200 in 8.3485 ms
+2025-04-07 00:53:46.806 +08:00 [INF] Registration page accessed at "2025-04-06T16:53:46.8068195Z"
+2025-04-07 00:53:46.818 +08:00 [INF] HTTP GET /Registration responded 200 in 11.9612 ms

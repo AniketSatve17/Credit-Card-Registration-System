@@ -1,0 +1,25 @@
+2025-04-06 21:21:13.136 +08:00 [INF] Starting the application...
+2025-04-06 21:21:13.438 +08:00 [INF] Now listening on: https://localhost:5001
+2025-04-06 21:21:13.440 +08:00 [INF] Now listening on: http://localhost:5000
+2025-04-06 21:21:13.442 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 21:21:13.443 +08:00 [INF] Hosting environment: Development
+2025-04-06 21:21:13.444 +08:00 [INF] Content root path: C:\users\anike\source\repos\CreditCardRegistration\CreditCardRegistration
+2025-04-06 21:21:49.110 +08:00 [INF] Home page accessed at "2025-04-06T13:21:49.1099015Z"
+2025-04-06 21:21:49.280 +08:00 [INF] HTTP GET / responded 200 in 234.6057 ms
+2025-04-06 21:21:49.357 +08:00 [INF] HTTP GET /css/site.css responded 200 in 25.4269 ms
+2025-04-06 21:21:49.362 +08:00 [INF] HTTP GET /js/site.js responded 200 in 27.2040 ms
+2025-04-06 21:21:49.362 +08:00 [INF] HTTP GET /CreditCardRegistration.styles.css responded 200 in 30.2722 ms
+2025-04-06 21:21:49.388 +08:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 55.8289 ms
+2025-04-06 21:21:49.418 +08:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 82.6377 ms
+2025-04-06 21:21:49.434 +08:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 102.4588 ms
+2025-04-06 21:21:49.449 +08:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 80.1982 ms
+2025-04-06 21:21:49.463 +08:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 131.6012 ms
+2025-04-06 21:21:50.080 +08:00 [INF] HTTP GET /favicon.ico responded 200 in 10.1614 ms
+2025-04-06 21:21:52.953 +08:00 [INF] Registration page accessed at "2025-04-06T13:21:52.9532057Z"
+2025-04-06 21:21:53.011 +08:00 [INF] HTTP GET /Registration responded 200 in 86.7296 ms
+2025-04-06 21:55:14.847 +08:00 [INF] Starting the application...
+2025-04-06 21:55:15.056 +08:00 [INF] Now listening on: https://localhost:5001
+2025-04-06 21:55:15.058 +08:00 [INF] Now listening on: http://localhost:5000
+2025-04-06 21:55:15.061 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 21:55:15.062 +08:00 [INF] Hosting environment: Development
+2025-04-06 21:55:15.062 +08:00 [INF] Content root path: C:\users\anike\source\repos\CreditCardRegistration\CreditCardRegistration

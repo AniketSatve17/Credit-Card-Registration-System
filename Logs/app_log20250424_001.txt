@@ -1,0 +1,17 @@
+2025-04-24 10:51:10.109 +08:00 [INF] Starting the application...
+2025-04-24 10:51:10.508 +08:00 [INF] Now listening on: https://localhost:5001
+2025-04-24 10:51:10.513 +08:00 [INF] Now listening on: http://localhost:5000
+2025-04-24 10:51:10.520 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-24 10:51:10.522 +08:00 [INF] Hosting environment: Development
+2025-04-24 10:51:10.523 +08:00 [INF] Content root path: C:\users\anike\source\repos\CreditCardRegistration\CreditCardRegistration
+2025-04-24 10:51:25.213 +08:00 [INF] Home page accessed at "2025-04-24T02:51:25.2132751Z"
+2025-04-24 10:51:25.507 +08:00 [INF] HTTP GET / responded 200 in 389.9836 ms
+2025-04-24 10:51:25.688 +08:00 [INF] HTTP GET /css/site.css responded 200 in 21.6808 ms
+2025-04-24 10:51:25.687 +08:00 [INF] HTTP GET /js/site.js responded 200 in 7.0638 ms
+2025-04-24 10:51:25.687 +08:00 [INF] HTTP GET /CreditCardRegistration.styles.css responded 200 in 21.7350 ms
+2025-04-24 10:51:25.779 +08:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 113.7678 ms
+2025-04-24 10:51:25.891 +08:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 211.4265 ms
+2025-04-24 10:51:25.924 +08:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 233.9315 ms
+2025-04-24 10:51:25.963 +08:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 284.1605 ms
+2025-04-24 10:51:26.023 +08:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 344.8772 ms
+2025-04-24 10:51:26.673 +08:00 [INF] HTTP GET /favicon.ico responded 200 in 25.0929 ms

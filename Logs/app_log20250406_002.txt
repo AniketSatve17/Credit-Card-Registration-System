@@ -1,0 +1,6 @@
+2025-04-06 21:55:14.847 +08:00 [INF] Starting the application...
+2025-04-06 21:55:15.056 +08:00 [INF] Now listening on: https://localhost:5001
+2025-04-06 21:55:15.058 +08:00 [INF] Now listening on: http://localhost:5000
+2025-04-06 21:55:15.061 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 21:55:15.062 +08:00 [INF] Hosting environment: Development
+2025-04-06 21:55:15.062 +08:00 [INF] Content root path: C:\users\anike\source\repos\CreditCardRegistration\CreditCardRegistration
